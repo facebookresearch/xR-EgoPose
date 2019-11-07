@@ -1,0 +1,23 @@
+# Byte-compiled
+__pycache__/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+.installed.cfg
+MANIFEST
+
+# Dataset
+data/Dataset
+
+# Sphinx documentation
+docs/_build/
+
+# pyenv
+.python-version
+
+# VSCode project settings
+.vscode/

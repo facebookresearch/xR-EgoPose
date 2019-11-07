@@ -1,0 +1,6 @@
+# config file
+
+dataset:
+  train: data/Dataset/TrainSet
+  val: data/Dataset/ValSet
+  test: data/Dataset/TestSet
