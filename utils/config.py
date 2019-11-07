@@ -9,18 +9,14 @@ Load data configuration
 import yaml
 from easydict import EasyDict as edict
 
-
-def set_skeleton():
-
-    
+# def set_skeleton():
 
 
 def load_config():
+    """Load config"""
 
     with open('data/config.yml') as fin:
         conf = edict(yaml.safe_load(fin))
-
-    
 
     return conf
 
