@@ -8,3 +8,7 @@ dataset:
 
 transforms:
   norm: Neck
+
+data_loader:
+  batch_size: 2
+  shuffle: True
