@@ -1,3 +1,4 @@
+# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 # -*- coding: utf-8 -*-
 """
 Base class for datasets.
@@ -7,15 +8,12 @@ provided in the README.md file.
 
 @author: Denis Tome'
 
-Copyright (c) Facebook, Inc. and its affiliates.
-
-This source code is licensed under the MIT license found in the
-LICENSE file in the root directory of this source tree.
-
 """
 import os
 import enum
+from torchvision import transforms
 from torch.utils.data import Dataset
+from base import BaseTransform
 from utils import ConsoleLogger, io
 
 
@@ -32,8 +30,16 @@ class BaseDataset(Dataset):
     Base class for all datasets
     """
 
-    def __init__(self, db_path, set_type):
-        """Init"""
+    def __init__(self, db_path, set_type, transform=None):
+        """Init class
+
+        Arguments:
+            db_path {str} -- path to set
+            set_type {SetType} -- set
+
+        Keyword Arguments:
+            transform {BaseTransform} -- transformation to apply to data (default: {None})
+        """
 
         assert isinstance(set_type, SetType)
         self.logger = ConsoleLogger(set_type.value)
@@ -44,6 +50,10 @@ class BaseDataset(Dataset):
             self.logger.error('Dataset directory {} not found'.format(db_path))
 
         self.index = self._load_index()
+
+        if transform:
+            assert isinstance(transform, (BaseTransform, transforms.Compose))
+        self.transform = transform
 
     def _load_index(self):
         """Get indexed set. If the set has already been

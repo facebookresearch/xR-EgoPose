@@ -7,18 +7,39 @@ The *x*R-EgoPose Dataset has been introduced in the paper ["*x*R-EgoPose: Egocen
 
 The code contained in this repository is a PyTorch implementation of the data loader with additional evaluation functions for comparison.
 
-## Train and test on Dataset
+## Citing *x*R-EgoPose
 
-Run
+```
+@inproceedings{tome2019xr,
+  title={xR-EgoPose: Egocentric 3D Human Pose from an HMD Camera},
+  author={Tome, Denis and Peluse, Patrick and Agapito, Lourdes and Badino, Hernan},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+  pages={7728--7738},
+  year={2019}
+}
+```
+
+The license agreement for the data usage implies citation of the paper. Please notice that citing the dataset URL instead of the publication would not be compliant with this license agreement.
+
+## Download on Mac OS and Linux
+
+Make sure pigz and wget are installed:
+```
+# on Mac OS
+brew install wget pigz
+# on Ubuntu
+sudo apt-get install pigz
+```
+
+To download and decompress the dataset use the download.sh script:
 ```
 ./download.sh
 ```
 
 which will dowload and set-up the dataset folder for training and testing the model.
+Make sure to have **~1TB free space** for storing the data.
 
-Make sure to **have ~1TB free space** for storing the data.
-
-## Data
+## *x*R-EgoPose Dataset
 
 Character names in the dataset follow the convention **gender**\_**id**\_**body-type**\_**height**
 
@@ -115,16 +136,6 @@ E.g. *Gaming* includes Boxing, Shooting Gun, Playing Golf, Playing Baseball just
 | Walking |  130.5 | 131.9 | 57.7 |
 | **All (mm)** | 122.1 | 130.4 | **58.2** |
 
-## Citing *x*R-EgoPose
+## License
 
-```
-@inproceedings{tome2019xr,
-  title={xR-EgoPose: Egocentric 3D Human Pose from an HMD Camera},
-  author={Tome, Denis and Peluse, Patrick and Agapito, Lourdes and Badino, Hernan},
-  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
-  pages={7728--7738},
-  year={2019}
-}
-```
-
-The license agreement for the data usage implies citation of the paper. Please notice that citing the dataset URL instead of the publication would not be compliant with this license agreement.
+See the LICENSE file for details.

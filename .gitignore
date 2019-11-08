@@ -1,3 +1,4 @@
+# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 # Byte-compiled
 __pycache__/
 
@@ -9,6 +10,9 @@ dist/
 downloads/
 .installed.cfg
 MANIFEST
+
+# Datasets
+data/Dataset/
 
 # Sphinx documentation
 docs/_build/
