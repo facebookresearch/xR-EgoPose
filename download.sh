@@ -80,12 +80,14 @@ download_set "${a_val[@]}"
 
 # Download and process Train set
 echo "Downloading and extracting Train set"
+cd ${dataset_dir}
 mkdir -p TrainSet
 cd TrainSet
 download_set "${a_train[@]}"
 
 # Download and process Test set
 echo "Downloading and extracting Test set"
+cd ${dataset_dir}
 mkdir -p TestSet
 cd TestSet
 download_set "${a_test[@]}"
