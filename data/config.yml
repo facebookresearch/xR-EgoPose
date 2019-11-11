@@ -12,3 +12,6 @@ transforms:
 data_loader:
   batch_size: 2
   shuffle: True
+
+eval:
+  output_file: data/eval_res.json

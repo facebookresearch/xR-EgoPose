@@ -8,8 +8,8 @@ IO utilities
 """
 import os
 import re
-import h5py
 import json
+import h5py
 import numpy as np
 
 
@@ -19,6 +19,7 @@ __all__ = [
     'get_files',
     'write_h5',
     'read_h5',
+    'write_json',
     'read_json'
 ]
 
@@ -154,6 +155,19 @@ def read_h5(path):
     h5_data.close()
 
     return data_files
+
+
+def write_json(path, data):
+    """Save data into a json file
+
+    Arguments:
+        path {str} -- path where to save the file
+        data {serializable} -- data to be stored
+    """
+
+    assert isinstance(path, str)
+    with open(path, 'w') as out_file:
+        json.dump(data, out_file, indent=2)
 
 
 def read_json(path):

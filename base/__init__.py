@@ -8,3 +8,4 @@ Init file
 """
 from .base_transform import BaseTransform
 from .base_dataset import BaseDataset, SetType
+from .base_eval import BaseEval

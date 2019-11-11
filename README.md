@@ -123,7 +123,7 @@ E.g. *Gaming* includes Boxing, Shooting Gun, Playing Golf, Playing Baseball just
 
 ## Results
 
-| Action | Martinez [1] | Ours - single |  Ours - dual branch |
+| Action | Martinez [1] | Ours - single branch |  Ours - dual branch |
 |--------|--------------|---------------|---------------------|
 | Gaming | 109.6 | 138.3 | 56.0 |
 | Gesticulating | 105.4 | 108.5 | 50.2 |

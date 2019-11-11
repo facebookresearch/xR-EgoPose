@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 
 dataset_dir=${PWD}/data/Dataset
 declare -a a_test=("female_004_a_a"
