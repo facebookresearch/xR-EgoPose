@@ -7,6 +7,7 @@ Demo code
 
 """
 from torch.utils.data import DataLoader
+import torch
 from torchvision import transforms
 from base import SetType
 import dataset.transform as trsf
@@ -59,7 +60,8 @@ def main():
         # ------------------- Run your model here -------------------
         # -----------------------------------------------------------
 
-        # TODO: p3d_hat is model's predition
+        # TODO: replace p3d_hat with model preditions
+        p3d_hat = torch.ones_like(p3d)
 
         # Evaluate results using different evaluation metrices
         y_output = p3d_hat.data.cpu().numpy()
@@ -68,6 +70,9 @@ def main():
         eval_body.eval(y_output, y_target, action)
         eval_upper.eval(y_output, y_target, action)
         eval_lower.eval(y_output, y_target, action)
+
+        # TODO: remove break
+        break
 
     # ------------------- Save results -------------------
 

@@ -38,6 +38,7 @@ To download and decompress the dataset use the download.sh script:
 
 which will dowload and set-up the dataset folder for training and testing the model.
 Make sure to have **~1TB free space** for storing the data.
+After that, run ```demo.py```. This shows how to load and evaluate the model.
 
 ## *x*R-EgoPose Dataset
 
