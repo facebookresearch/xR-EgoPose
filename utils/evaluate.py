@@ -56,13 +56,17 @@ class EvalBody(BaseEval):
         for pid, (pose_in, pose_target) in enumerate(zip(pred, gt)):
             err = compute_error(pose_in, pose_target)
 
-            self.error['All'].append(err)
             if actions:
-                # add element to dictionary in not there yet
-                if not self._is_action_stored(actions[pid]):
-                    self._init_action(actions[pid])
+                act_name = self._map_action_name(actions[pid])
 
-                self.error[actions[pid]].append(err)
+                # add element to dictionary if not there yet
+                if not self._is_action_stored(act_name):
+                    self._init_action(act_name)
+                self.error[act_name].append(err)
+
+            # add to all
+            act_name = 'All'
+            self.error[act_name].append(err)
 
     def desc(self):
         return 'Average3DError'
@@ -87,13 +91,17 @@ class EvalUpperBody(BaseEval):
         for pid, (pose_in, pose_target) in enumerate(zip(pred, gt)):
             err = compute_error(pose_in[self._SEL], pose_target[self._SEL])
 
-            self.error['All'].append(err)
             if actions:
-                # add element to dictionary in not there yet
-                if not self._is_action_stored(actions[pid]):
-                    self._init_action(actions[pid])
+                act_name = self._map_action_name(actions[pid])
 
-                self.error[actions[pid]].append(err)
+                # add element to dictionary if not there yet
+                if not self._is_action_stored(act_name):
+                    self._init_action(act_name)
+                self.error[act_name].append(err)
+
+            # add to all
+            act_name = 'All'
+            self.error[act_name].append(err)
 
     def desc(self):
         return 'UpperBody_Average3DError'
@@ -118,13 +126,17 @@ class EvalLowerBody(BaseEval):
         for pid, (pose_in, pose_target) in enumerate(zip(pred, gt)):
             err = compute_error(pose_in[self._SEL], pose_target[self._SEL])
 
-            self.error['All'].append(err)
             if actions:
-                # add element to dictionary in not there yet
-                if not self._is_action_stored(actions[pid]):
-                    self._init_action(actions[pid])
+                act_name = self._map_action_name(actions[pid])
 
-                self.error[actions[pid]].append(err)
+                # add element to dictionary if not there yet
+                if not self._is_action_stored(act_name):
+                    self._init_action(act_name)
+                self.error[act_name].append(err)
+
+            # add to all
+            act_name = 'All'
+            self.error[act_name].append(err)
 
     def desc(self):
         return 'LowerBody_Average3DError'
