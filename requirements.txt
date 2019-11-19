@@ -11,7 +11,7 @@ numpy==1.15.4
 numpydoc==0.8.0
 packaging==19.0
 pep8==1.7.1
-Pillow==5.3.0
+Pillow==6.2.0
 ply==3.11
 protobuf==3.9.1
 ptyprocess==0.6.0
