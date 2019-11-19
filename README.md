@@ -137,6 +137,7 @@ E.g. *Gaming* includes Boxing, Shooting Gun, Playing Golf, Playing Baseball just
 | Walking |  130.5 | 131.9 | 57.7 |
 | **All (mm)** | 122.1 | 130.4 | **58.2** |
 
+[1] *Julieta Martinez, Rayat Hossain, Javier Romero, and James JLittle. A simple yet effective baseline for 3d human pose estimation. In Proceedings of the International Conference on Computer Vision (ICCV), 2017*
 ## License
 
 See the LICENSE file for details.
