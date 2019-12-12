@@ -104,10 +104,10 @@ mkdir -p ${dataset_dir}
 cd ${dataset_dir}
 
 # Download and process Validation set
-# download_set "ValSet"
+download_set "ValSet"
 
 # Download and process Train set
 download_set "TrainSet"
 
 # # Download and process Test set
-# download_set "TestSet"
+download_set "TestSet"
