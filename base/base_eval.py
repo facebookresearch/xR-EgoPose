@@ -6,6 +6,7 @@ Base eval class
 @author: Denis Tome'
 
 """
+import re
 from abc import ABC, abstractmethod
 import numpy as np
 from utils import ConsoleLogger, config
@@ -22,6 +23,10 @@ class BaseEval(ABC):
         self.action_map = config.actions
 
     def _map_action_name(self, name):
+
+        additional = re.findall(r'_mixamo_com.*', name)
+        if additional:
+            name = name.replace(additional[0], '')
 
         if name in list(self.action_map.keys()):
             return self.action_map[name]
