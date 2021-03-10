@@ -7,7 +7,7 @@ The *x*R-EgoPose Dataset has been introduced in the paper ["*x*R-EgoPose: Egocen
 
 The code contained in this repository is a PyTorch implementation of the data loader with additional evaluation functions for comparison.
 
-## Citing *x*R-EgoPose
+## Citation
 
 ```
 @inproceedings{tome2019xr,
@@ -16,6 +16,16 @@ The code contained in this repository is a PyTorch implementation of the data lo
   booktitle={Proceedings of the IEEE International Conference on Computer Vision},
   pages={7728--7738},
   year={2019}
+}
+@ARTICLE{tome2020self,
+  author={D. {Tome} and T. {Alldieck} and P. {Peluse} and G. {Pons-Moll} and L. {Agapito} and H. {Badino} and F. {De la Torre}},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  title={SelfPose: 3D Egocentric Pose Estimation from a Headset Mounted Camera},
+  year={2020},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TPAMI.2020.3029700}
 }
 ```
 
