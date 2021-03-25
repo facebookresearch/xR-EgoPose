@@ -22,7 +22,7 @@ pytest-doctestplus==0.3.0
 pytest-openfiles==0.3.2
 pytest-remotedata==0.3.1
 python-dateutil==2.8.0
-PyYAML==5.1.1
+PyYAML==5.4
 ruamel-yaml==0.15.46
 scikit-image==0.14.1
 scikit-learn==0.20.1
