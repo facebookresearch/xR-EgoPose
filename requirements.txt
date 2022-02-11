@@ -12,7 +12,7 @@ numpydoc==0.8.0
 packaging==19.0
 pep8==1.7.1
 ply==3.11
-protobuf==3.9.1
+protobuf==3.15.0
 ptyprocess==0.6.0
 py==1.8.0
 pytest==5.0.1
