@@ -7,7 +7,7 @@ imagesize==1.1.0
 importlib-metadata==0.6
 json5==0.8.4
 matplotlib==3.0.2
-numpy==1.15.4
+numpy==1.22.0
 numpydoc==0.8.0
 packaging==19.0
 pep8==1.7.1
