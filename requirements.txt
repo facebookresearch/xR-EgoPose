@@ -26,7 +26,7 @@ PyYAML==5.1.1
 ruamel-yaml==0.15.46
 scikit-image==0.14.1
 scikit-learn==0.20.1
-scipy==1.1.0
+scipy==1.10.0
 seaborn==0.9.0
 toolz==0.10.0
 torch==1.2.0
